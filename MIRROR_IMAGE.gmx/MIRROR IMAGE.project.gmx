@@ -6,28 +6,42 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_splash</sprite>
-    <sprite>sprites\spr_player</sprite>
-    <sprite>sprites\spr_oPlayer</sprite>
-    <sprite>sprites\spr_wall</sprite>
+    <sprites name="Players">
+      <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_oPlayer</sprite>
+    </sprites>
+    <sprites name="Environment">
+      <sprite>sprites\spr_wall</sprite>
+    </sprites>
+    <sprites name="Fluff">
+      <sprite>sprites\spr_splash</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_playerMove.gml</script>
-    <script>scripts\scr_oplayerMove.gml</script>
+    <scripts name="Player Scripts">
+      <script>scripts\scr_playerMove.gml</script>
+      <script>scripts\scr_oplayerMove.gml</script>
+    </scripts>
     <script>scripts\scr_depth.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_rain_generator</object>
-    <object>objects\obj_rain</object>
-    <object>objects\obj_Player</object>
-    <object>objects\obj_oPlayer</object>
-    <object>objects\obj_splash</object>
-    <object>objects\obj_wall</object>
+    <objects name="Players">
+      <object>objects\obj_Player</object>
+      <object>objects\obj_oPlayer</object>
+    </objects>
+    <objects name="Environment">
+      <object>objects\obj_wall</object>
+    </objects>
+    <objects name="Fluff">
+      <object>objects\obj_rain_generator</object>
+      <object>objects\obj_rain</object>
+      <object>objects\obj_splash</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
