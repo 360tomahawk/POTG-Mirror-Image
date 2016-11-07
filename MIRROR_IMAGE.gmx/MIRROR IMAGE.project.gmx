@@ -16,6 +16,7 @@
     <sprites name="Fluff">
       <sprite>sprites\spr_splash</sprite>
     </sprites>
+    <sprite>sprites\spr_light</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -38,6 +39,7 @@
       <object>objects\obj_rain_generator</object>
       <object>objects\obj_rain</object>
       <object>objects\obj_splash</object>
+      <object>objects\obj_world_fog</object>
     </objects>
   </objects>
   <rooms name="rooms">
