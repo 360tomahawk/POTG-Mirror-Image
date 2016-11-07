@@ -26,6 +26,7 @@
       <script>scripts\scr_oplayerMove.gml</script>
     </scripts>
     <script>scripts\scr_depth.gml</script>
+    <script>scripts\scr_whatToDo.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Players">
