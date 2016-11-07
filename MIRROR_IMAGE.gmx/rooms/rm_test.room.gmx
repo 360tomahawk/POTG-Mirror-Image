@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>16512</colour>
   <showcolour>-1</showcolour>
   <code>///comment out as needed
 
@@ -16,7 +16,15 @@
 instance_create(0,0,obj_rain_generator);
 
 // fog of war
-instance_create(0,0,obj_world_fog);</code>
+instance_create(0,0,obj_world_fog);
+
+var lensFlare = true;
+
+if(lensFlare == true)
+{
+    instance_create(0,0,obj_lensGlow);
+    instance_create(0,0,obj_lensTail);
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
