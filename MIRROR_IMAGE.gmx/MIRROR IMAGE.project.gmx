@@ -30,6 +30,11 @@
       <sprite>sprites\spr_pitfall_1</sprite>
       <sprite>sprites\spr_pitfall_2</sprite>
       <sprite>sprites\spr_pitfall_3</sprite>
+      <sprite>sprites\spr_key_red</sprite>
+      <sprite>sprites\spr_door_red</sprite>
+      <sprite>sprites\spr_key_green</sprite>
+      <sprite>sprites\spr_door_green</sprite>
+      <sprite>sprites\spr_swapper</sprite>
     </sprites>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_door2</sprite>
@@ -81,6 +86,11 @@
       <object>objects\obj_pitfall_3</object>
       <object>objects\obj_blind_debuff</object>
       <object>objects\obj_pitfall_2</object>
+      <object>objects\obj_key_red</object>
+      <object>objects\obj_door_red</object>
+      <object>objects\obj_key_green</object>
+      <object>objects\obj_door_green</object>
+      <object>objects\obj_swapper</object>
     </objects>
     <objects name="GUI Stuff">
       <object>objects\obj_timer</object>
