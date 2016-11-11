@@ -31,8 +31,6 @@
       <sprite>sprites\spr_pitfall_2</sprite>
       <sprite>sprites\spr_pitfall_3</sprite>
     </sprites>
-    <sprite>sprites\spr_door</sprite>
-    <sprite>sprites\spr_door2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -43,6 +41,9 @@
     </scripts>
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_simpleTile.gml</script>
+    <scripts name="GUI Stuff">
+      <script>scripts\scr_creating_Timer.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -70,6 +71,8 @@
       <object>objects\obj_Main_Title</object>
       <object>objects\obj_Main_Selection</object>
     </objects>
+    <object>objects\obj_collidable_parent</object>
+    <object>objects\obj_players</object>
     <objects name="Burdens">
       <object>objects\obj_blindness</object>
       <object>objects\obj_pitfall_1</object>
@@ -77,20 +80,13 @@
       <object>objects\obj_blind_debuff</object>
       <object>objects\obj_pitfall_2</object>
     </objects>
-    <objects name="static doors">
-      <object>objects\obj_red_door</object>
-      <object>objects\obj_green_door</object>
+    <objects name="GUI Stuff">
+      <object>objects\obj_timer</object>
     </objects>
-    <object>objects\obj_collidable_parent</object>
-    <object>objects\obj_players</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
-    <rooms name="game_rooms">
-      <room>rooms\rm_level1</room>
-      <room>rooms\rm_level2</room>
-      <room>rooms\rm_level3</room>
-    </rooms>
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
   </rooms>
