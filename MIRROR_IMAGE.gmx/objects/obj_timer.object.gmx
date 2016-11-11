@@ -25,14 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rooms_wid = (room_width/2);
-rooms_hei = (room_height/2);
-
-zeSelectionsStuff = SelectionMenu.START;
-zeSelectionListStr[SelectionMenu.EXIT] = "EXIT";
-zeSelectionListStr[SelectionMenu.OPTION] = "OPTION"; 
-zeSelectionListStr[SelectionMenu.START] = "START GAME";
-FontSize = 5;
+            <string>zeCountingTimeSec = 800;
+zeTimer = 0;
+room_wid = (room_width * 0.1);
+room_hei = (room_height * 0.8);
 </string>
           </argument>
         </arguments>
@@ -55,16 +51,7 @@ FontSize = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_down))
-{
-    zeSelectionsStuff = min(zeSelectionsStuff+1,SelectionMenu.TOTAL_SELECTIONS-1);
-}
-
-if (keyboard_check_pressed(vk_up))
-{
-    zeSelectionsStuff = max(zeSelectionsStuff-1,0);
-}
-
+            <string>zeTimer += (1/room_speed);
 </string>
           </argument>
         </arguments>
@@ -87,20 +74,7 @@ if (keyboard_check_pressed(vk_up))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
-var theHeightOfArray = rooms_hei;
-var num = 0;
-repeat(SelectionMenu.TOTAL_SELECTIONS)
-{
-    draw_text_transformed_colour(rooms_wid, theHeightOfArray, zeSelectionListStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
-    theHeightOfArray += 60;
-    ++num;
-}
-var offSet = 20;
-var zeStrLength = offSet + (string_length(zeSelectionListStr[zeSelectionsStuff]) * FontSize * FontSize);
-draw_sprite(spr_player,0,rooms_wid-zeStrLength, rooms_hei + (zeSelectionsStuff*60));
-draw_sprite(spr_oPlayer,0,rooms_wid+zeStrLength+8, rooms_hei + (zeSelectionsStuff*60));
+            <string>draw_text_transformed_colour(room_wid,room_hei,string(int64(zeCountingTimeSec-zeTimer)), 8,8,0,c_lime,c_lime,c_lime,c_lime,0.5);
 </string>
           </argument>
         </arguments>
