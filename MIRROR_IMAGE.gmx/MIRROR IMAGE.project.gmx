@@ -46,7 +46,13 @@
     </scripts>
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_simpleTile.gml</script>
+    <scripts name="GUI Stuff">
+      <script>scripts\scr_creating_Timer.gml</script>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
     <objects name="Players">
       <object>objects\obj_Player</object>
@@ -84,11 +90,14 @@
       <object>objects\obj_door_green</object>
       <object>objects\obj_swapper</object>
     </objects>
+    <objects name="GUI Stuff">
+      <object>objects\obj_timer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_test</room>
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_level1</room>
+    <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
   </rooms>
   <help>
