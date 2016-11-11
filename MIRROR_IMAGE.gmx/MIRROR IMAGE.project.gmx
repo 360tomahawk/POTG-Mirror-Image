@@ -32,6 +32,9 @@
     </scripts>
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_simpleTile.gml</script>
+    <scripts name="Main Menu Stuff">
+      <script>scripts\scr_enums_for_Selection.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Players">
@@ -51,8 +54,14 @@
         <object>objects\obj_lensTail</object>
       </objects>
     </objects>
+    <objects name="Main Menu Stuff">
+      <object>objects\obj_Main_Title</object>
+      <object>objects\obj_Main_Selection</object>
+      <object>objects\obj_Player_Selection</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_main_menu</room>
     <room>rooms\rm_test</room>
   </rooms>
   <help>
