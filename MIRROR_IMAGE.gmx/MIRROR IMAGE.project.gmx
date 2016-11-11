@@ -30,9 +30,9 @@
       <sprite>sprites\spr_key_green</sprite>
       <sprite>sprites\spr_door_green</sprite>
       <sprite>sprites\spr_swapper</sprite>
+      <sprite>sprites\spr_door</sprite>
+      <sprite>sprites\spr_door2</sprite>
     </sprites>
-    <sprite>sprites\spr_door</sprite>
-    <sprite>sprites\spr_door2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -63,12 +63,18 @@
       <object>objects\obj_rain</object>
       <object>objects\obj_splash</object>
     </objects>
-    <objects name="Main Menu Stuff">
-      <object>objects\obj_Main_Title</object>
-      <object>objects\obj_Main_Selection</object>
+    <objects name="GUI">
+      <objects name="Main Menu Stuff">
+        <object>objects\obj_Main_Title</object>
+        <object>objects\obj_Main_Selection</object>
+      </objects>
+      <objects name="Option Menu Stuff">
+        <object>objects\obj_Option_Selection</object>
+      </objects>
+      <objects name="GUI Stuff">
+        <object>objects\obj_timer</object>
+      </objects>
     </objects>
-    <object>objects\obj_collidable_parent</object>
-    <object>objects\obj_players</object>
     <objects name="Burdens">
       <object>objects\obj_blindness</object>
       <object>objects\obj_pitfall_1</object>
@@ -80,22 +86,18 @@
       <object>objects\obj_key_green</object>
       <object>objects\obj_door_green</object>
       <object>objects\obj_swapper</object>
+      <object>objects\obj_green_door</object>
+      <object>objects\obj_red_door</object>
     </objects>
-    <objects name="GUI Stuff">
-      <object>objects\obj_timer</object>
-    </objects>
-    <object>objects\obj_green_door</object>
-    <object>objects\obj_red_door</object>
-    <objects name="Option Menu Stuff">
-      <object>objects\obj_Option_Selection</object>
-    </objects>
+    <object>objects\obj_collidable_parent</object>
+    <object>objects\obj_players</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_options_menu</room>
     <room>rooms\rm_level1</room>
     <room>rooms\rm_level2</room>
     <room>rooms\rm_level3</room>
-    <room>rooms\rm_options_menu</room>
     <room>rooms\rm_template</room>
     <room>rooms\rm_test</room>
   </rooms>

@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>zeCountingTimeSec = 800;
-zeTimer = 0;
-room_wid = (room_width * 0.15);
-room_hei = (room_height * 0.8);
+            <string>x = (room_width * 0.15);
+y = (room_height * 0.8);
 FontSize = 1.5;
 </string>
           </argument>
@@ -52,10 +50,11 @@ FontSize = 1.5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>zeTimer += (1/room_speed);
+            <string>global.TimerLimitSec -= (1/room_speed);
 
-if(zeCountingTimeSec - zeTimer &lt;= 0)
+if(global.TimerLimitSec &lt;= 0)
 {
+    global.TimerLimitSec = 0;
     game_end();
 }
 </string>
@@ -80,7 +79,7 @@ if(zeCountingTimeSec - zeTimer &lt;= 0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_transformed_colour(room_wid,room_hei,string(int64(zeCountingTimeSec-zeTimer)), FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,0.5);
+            <string>draw_text_transformed_colour(x,y,string(int64(global.TimerLimitSec)), FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,0.5);
 </string>
           </argument>
         </arguments>

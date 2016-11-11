@@ -71,7 +71,7 @@ if (keyboard_check_pressed(vk_enter))
     {
         case SelectionMenu.START:
         {
-            room_goto_next();
+            room_goto(rm_level1);
             break;
         }
         case SelectionMenu.OPTION:
