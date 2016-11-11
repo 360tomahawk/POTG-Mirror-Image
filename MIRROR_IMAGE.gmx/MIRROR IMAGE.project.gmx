@@ -35,7 +35,11 @@
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_simpleTile.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\obj_collidable_parent</object>
     <objects name="Players">
       <object>objects\obj_Player</object>
       <object>objects\obj_oPlayer</object>
@@ -54,7 +58,6 @@
         <object>objects\obj_lensTail</object>
       </objects>
     </objects>
-    <object>objects\obj_collidable_parent</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level1</room>

@@ -5,8 +5,8 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>obj_collidable_parent</parentName>
-  <maskName>&lt;undefined&gt;</maskName>
+  <parentName>self</parentName>
+  <maskName>spr_square_mask</maskName>
   <events>
     <event eventtype="3" enumb="0">
       <action>
