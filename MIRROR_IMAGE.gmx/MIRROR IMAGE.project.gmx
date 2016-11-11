@@ -63,6 +63,7 @@
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_template</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
