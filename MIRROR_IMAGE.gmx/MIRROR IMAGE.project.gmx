@@ -19,11 +19,6 @@
       <sprite>sprites\spr_splash</sprite>
       <sprite>sprites\spr_light</sprite>
     </sprites>
-    <sprites name="LENS FLARE">
-      <sprite>sprites\spr_glow</sprite>
-      <sprite>sprites\spr_mask</sprite>
-      <sprite>sprites\spr_tail</sprite>
-    </sprites>
     <sprites name="Burdens">
       <sprite>sprites\spr_blind_debuff</sprite>
       <sprite>sprites\spr_blindness</sprite>
@@ -47,7 +42,6 @@
       <script>scripts\scr_oplayerMove.gml</script>
     </scripts>
     <script>scripts\scr_depth.gml</script>
-    <script>scripts\scr_simpleTile.gml</script>
     <scripts name="GUI Stuff">
       <script>scripts\scr_creating_Timer.gml</script>
     </scripts>
@@ -68,11 +62,6 @@
       <object>objects\obj_rain_generator</object>
       <object>objects\obj_rain</object>
       <object>objects\obj_splash</object>
-      <object>objects\obj_world_fog</object>
-      <objects name="lensFlare">
-        <object>objects\obj_lensGlow</object>
-        <object>objects\obj_lensTail</object>
-      </objects>
     </objects>
     <objects name="Main Menu Stuff">
       <object>objects\obj_Main_Title</object>
