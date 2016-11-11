@@ -1,4 +1,4 @@
 ///scr_initialized_globalVar()
-global.TimerLimitSec = 800;
+global.TimerLimitSec = 801;
 global.TurnOnSound = true;
-global.PlayerScore = 0;
+global.fogged = false;

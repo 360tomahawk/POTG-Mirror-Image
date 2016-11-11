@@ -10,7 +10,10 @@
   <persistent>0</persistent>
   <colour>16512</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>if (!instance_exists(obj_timer))
+{
+    instance_create(0,0,obj_timer);
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -180,6 +183,14 @@
     <instance objName="obj_wall" x="1056" y="416" name="inst_BF16D554" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1088" y="416" name="inst_D1189652" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_nextlvl" x="640" y="128" name="inst_5FE1BC84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_key_red" x="128" y="416" name="inst_7AC45DEF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="448" y="416" name="inst_8E01AAB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="512" y="416" name="inst_E6C549EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="576" y="416" name="inst_D0AD9E3C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="640" y="416" name="inst_1FD00AE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="704" y="416" name="inst_0FD94B07" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="768" y="416" name="inst_809EE852" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_red" x="832" y="416" name="inst_41DDA2FB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

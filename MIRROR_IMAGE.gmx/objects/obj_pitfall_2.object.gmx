@@ -41,6 +41,7 @@ if(isChanged == true)
     instance_create(x,y,obj_pitfall_3);
     isStepped = false;
     isChanged = false;
+    audio_play_sound(snd_pitfall,0,0);
     instance_destroy();
 }
 </string>

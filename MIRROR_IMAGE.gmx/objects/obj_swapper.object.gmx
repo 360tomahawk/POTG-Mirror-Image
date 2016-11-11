@@ -29,6 +29,7 @@
 var player1PosY = obj_Player.y;
 var player2PosX = obj_oPlayer.x;
 var player2PosY = obj_oPlayer.y;
+tempbool = false;
 
 if(place_meeting(x,y,obj_players))
 {
@@ -36,6 +37,11 @@ if(place_meeting(x,y,obj_players))
     obj_Player.y = player2PosY;
     obj_oPlayer.x = player1PosX;
     obj_oPlayer.y = player1PosY;
+    if(!tempbool)
+    {
+        audio_play_sound(snd_swapping,0, false);
+        tempbool = true;
+    }
     instance_destroy();
 }
 

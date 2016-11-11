@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-2000</depth>
+  <depth>-1001</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,8 @@
             <string>x = (room_width * 0.15);
 y = (room_height * 0.8);
 FontSize = 1.5;
+
+isPlaying = false;
 </string>
           </argument>
         </arguments>
@@ -52,10 +54,44 @@ FontSize = 1.5;
             <kind>1</kind>
             <string>global.TimerLimitSec -= (1/room_speed);
 
+if(isPlaying == false)
+{
+    audio_stop_sound(snd_mainmenu);
+    audio_play_sound(snd_ingame,0,true);
+    isPlaying = true;
+}
 if(global.TimerLimitSec &lt;= 0)
 {
     global.TimerLimitSec = 0;
     game_end();
+}
+
+if(keyboard_check_pressed(ord("R")))
+{
+    if(isPlaying == true)
+    {
+        isPlaying = false;
+        audio_stop_sound(snd_ingame);
+    }
+    room_restart();
+}
+
+if(global.fogged == true)
+{
+    if(!instance_exists(obj_worldfog))
+    {
+        instance_create(0,0,obj_worldfog);
+    }
+}
+else
+{
+    if(instance_exists(obj_worldfog))
+    {
+        with(obj_worldfog)
+        {
+            instance_destroy();
+        }
+    }
 }
 </string>
           </argument>

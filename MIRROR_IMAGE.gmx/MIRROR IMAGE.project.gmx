@@ -4,16 +4,31 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_swapping</sound>
+    <sound>sound\snd_pitfall</sound>
+    <sound>sound\snd_key</sound>
+    <sound>sound\snd_debuff</sound>
+    <sound>sound\snd_losing</sound>
+    <sound>sound\snd_nextLevel</sound>
+    <sound>sound\snd_selection</sound>
+    <sound>sound\snd_mainmenu</sound>
+    <sound>sound\snd_ingame</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Players">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_oPlayer</sprite>
+      <sprite>sprites\spr_player_side</sprite>
+      <sprite>sprites\spr_oPlayer_side</sprite>
+      <sprite>sprites\spr_player_back</sprite>
+      <sprite>sprites\spr_oPlayer_back</sprite>
     </sprites>
     <sprites name="Environment">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_nextlvl</sprite>
       <sprite>sprites\spr_square_mask</sprite>
+      <sprite>sprites\spr_wall2</sprite>
     </sprites>
     <sprites name="Fluff">
       <sprite>sprites\spr_splash</sprite>
@@ -32,9 +47,15 @@
       <sprite>sprites\spr_swapper</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door2</sprite>
+      <sprite>sprites\spr_door_red_open</sprite>
+      <sprite>sprites\spr_door_green_open</sprite>
+      <sprite>sprites\spr_door_open</sprite>
+      <sprite>sprites\spr_door2_open</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player Scripts">
@@ -45,6 +66,7 @@
     <scripts name="GUI Stuff">
       <script>scripts\scr_initialized_globalVar.gml</script>
     </scripts>
+    <script>scripts\scr_fogged_draw.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -62,6 +84,7 @@
       <object>objects\obj_rain_generator</object>
       <object>objects\obj_rain</object>
       <object>objects\obj_splash</object>
+      <object>objects\obj_worldfog</object>
     </objects>
     <objects name="GUI">
       <objects name="Main Menu Stuff">
@@ -74,15 +97,10 @@
       <objects name="GUI Stuff">
         <object>objects\obj_timer</object>
       </objects>
-      <objects name="Ending Stuff">
-        <object>objects\obj_end</object>
-      </objects>
     </objects>
     <objects name="Burdens">
-      <object>objects\obj_blindness</object>
       <object>objects\obj_pitfall_1</object>
       <object>objects\obj_pitfall_3</object>
-      <object>objects\obj_blind_debuff</object>
       <object>objects\obj_pitfall_2</object>
       <object>objects\obj_key_red</object>
       <object>objects\obj_door_red</object>
@@ -101,9 +119,9 @@
     <room>rooms\rm_level1</room>
     <room>rooms\rm_level2</room>
     <room>rooms\rm_level3</room>
-    <room>rooms\rm_template</room>
+    <room>rooms\rm_level4</room>
     <room>rooms\rm_test</room>
-    <room>rooms\rm_end</room>
+    <room>rooms\rm_template</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
