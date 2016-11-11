@@ -72,6 +72,12 @@ if (keyboard_check_pressed(vk_enter))
     case SelectionMenu.START:
     room_goto_next();
     break;
+    case SelectionMenu.OPTION:
+    room_goto(rm_options_menu);
+    break;
+    case SelectionMenu.EXIT:
+    game_end();
+    break;
     default:
     break;
     }
