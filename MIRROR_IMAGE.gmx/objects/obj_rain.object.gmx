@@ -51,7 +51,8 @@ height = 20;
           <argument>
             <kind>1</kind>
             <string>///iterate downward
-height -= 1; 
+height -= 1;
+scr_depth();
 //speed the rain falls, higher = faster
 
 //if the rain hits the ground, it splashes

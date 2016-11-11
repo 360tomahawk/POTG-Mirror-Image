@@ -31,6 +31,8 @@
       <sprite>sprites\spr_pitfall_2</sprite>
       <sprite>sprites\spr_pitfall_3</sprite>
     </sprites>
+    <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_door2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -83,10 +85,14 @@
     <objects name="GUI Stuff">
       <object>objects\obj_timer</object>
     </objects>
+    <object>objects\obj_green_door</object>
+    <object>objects\obj_red_door</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_level1</room>
+    <room>rooms\rm_level2</room>
+    <room>rooms\rm_level3</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
   </rooms>
