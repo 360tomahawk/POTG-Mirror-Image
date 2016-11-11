@@ -53,7 +53,7 @@
 draw_set_colour(c_lime);
 draw_text((room_width/2),0, "Mirror Image");
 */
-draw_text_transformed_colour(rooms_w,0,"Mirror Image",5,5,0, c_lime, c_lime, c_lime, c_lime,1);
+draw_text_transformed_colour(rooms_w,(room_height * 0.1),"T O M O D A C H I",1,1,0, c_lime, c_lime, c_lime, c_lime,1);
 </string>
           </argument>
         </arguments>

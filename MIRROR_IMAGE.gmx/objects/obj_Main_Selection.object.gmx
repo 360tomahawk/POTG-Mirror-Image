@@ -32,7 +32,7 @@ zeSelectionsStuff = SelectionMenu.START;
 zeSelectionListStr[SelectionMenu.EXIT] = "EXIT";
 zeSelectionListStr[SelectionMenu.OPTION] = "OPTION"; 
 zeSelectionListStr[SelectionMenu.START] = "START GAME";
-FontSize = 2;
+FontSize = 0.8;
 </string>
           </argument>
         </arguments>
@@ -69,17 +69,13 @@ if (keyboard_check_pressed(vk_enter))
 {
     switch (zeSelectionsStuff)
     {
-    case SelectionMenu.START:
-    room_goto_next();
-    break;
-    case SelectionMenu.OPTION:
-    room_goto(rm_options_menu);
-    break;
-    case SelectionMenu.EXIT:
-    game_end();
-    break;
-    default:
-    break;
+        case SelectionMenu.START:
+        {
+            room_goto_next();
+            break;
+        }
+        default:
+        break;
     }
 }
 </string>
