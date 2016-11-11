@@ -53,6 +53,11 @@ FontSize = 1.5;
           <argument>
             <kind>1</kind>
             <string>zeTimer += (1/room_speed);
+
+if(zeCountingTimeSec - zeTimer &lt;= 0)
+{
+    game_end();
+}
 </string>
           </argument>
         </arguments>
