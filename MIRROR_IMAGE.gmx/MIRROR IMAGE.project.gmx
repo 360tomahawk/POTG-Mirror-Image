@@ -45,6 +45,9 @@
       <script>scripts\scr_creating_Timer.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
     <objects name="Players">
       <object>objects\obj_Player</object>

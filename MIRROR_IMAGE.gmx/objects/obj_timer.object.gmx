@@ -29,6 +29,7 @@
 zeTimer = 0;
 room_wid = (room_width * 0.15);
 room_hei = (room_height * 0.8);
+FontSize = 1.5;
 </string>
           </argument>
         </arguments>
@@ -74,7 +75,7 @@ room_hei = (room_height * 0.8);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_transformed_colour(room_wid,room_hei,string(int64(zeCountingTimeSec-zeTimer)), 8,8,0,c_lime,c_lime,c_lime,c_lime,0.5);
+            <string>draw_text_transformed_colour(room_wid,room_hei,string(int64(zeCountingTimeSec-zeTimer)), FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,0.5);
 </string>
           </argument>
         </arguments>
