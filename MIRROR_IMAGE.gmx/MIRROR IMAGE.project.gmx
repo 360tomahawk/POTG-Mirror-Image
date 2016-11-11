@@ -12,6 +12,8 @@
     </sprites>
     <sprites name="Environment">
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_nextlvl</sprite>
+      <sprite>sprites\spr_square_mask</sprite>
     </sprites>
     <sprites name="Fluff">
       <sprite>sprites\spr_splash</sprite>
@@ -32,9 +34,6 @@
     </scripts>
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_simpleTile.gml</script>
-    <scripts name="Main Menu Stuff">
-      <script>scripts\scr_enums_for_Selection.gml</script>
-    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Players">
@@ -43,6 +42,7 @@
     </objects>
     <objects name="Environment">
       <object>objects\obj_wall</object>
+      <object>objects\obj_nextlvl</object>
     </objects>
     <objects name="Fluff">
       <object>objects\obj_rain_generator</object>
@@ -54,15 +54,17 @@
         <object>objects\obj_lensTail</object>
       </objects>
     </objects>
+    <object>objects\obj_collidable_parent</object>
     <objects name="Main Menu Stuff">
       <object>objects\obj_Main_Title</object>
       <object>objects\obj_Main_Selection</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
+    <room>rooms\rm_main_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

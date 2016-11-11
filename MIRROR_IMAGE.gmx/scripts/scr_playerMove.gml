@@ -19,12 +19,12 @@ hsp = (key_left + key_right) * movespeed;
 vsp = (key_up + key_down) * movespeed;
 
 //--------------------------------
-if(place_meeting(x, y + vsp, obj_wall))
+if(place_meeting(x, y + vsp, obj_collidable_parent))
 {
     vsp = 0;
 }
 
-if(place_meeting(x + hsp, y, obj_wall))
+if(place_meeting(x + hsp, y, obj_collidable_parent))
 {
     hsp = 0;
 }
