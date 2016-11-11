@@ -74,6 +74,9 @@
       <objects name="GUI Stuff">
         <object>objects\obj_timer</object>
       </objects>
+      <objects name="Ending Stuff">
+        <object>objects\obj_end</object>
+      </objects>
     </objects>
     <objects name="Burdens">
       <object>objects\obj_blindness</object>
@@ -100,6 +103,7 @@
     <room>rooms\rm_level3</room>
     <room>rooms\rm_template</room>
     <room>rooms\rm_test</room>
+    <room>rooms\rm_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
