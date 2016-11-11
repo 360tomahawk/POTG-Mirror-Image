@@ -17,11 +17,16 @@
     <sprites name="Players">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_oPlayer</sprite>
+      <sprite>sprites\spr_player_side</sprite>
+      <sprite>sprites\spr_oPlayer_side</sprite>
+      <sprite>sprites\spr_player_back</sprite>
+      <sprite>sprites\spr_oPlayer_back</sprite>
     </sprites>
     <sprites name="Environment">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_nextlvl</sprite>
       <sprite>sprites\spr_square_mask</sprite>
+      <sprite>sprites\spr_wall2</sprite>
     </sprites>
     <sprites name="Fluff">
       <sprite>sprites\spr_splash</sprite>
@@ -40,9 +45,15 @@
       <sprite>sprites\spr_swapper</sprite>
       <sprite>sprites\spr_door</sprite>
       <sprite>sprites\spr_door2</sprite>
+      <sprite>sprites\spr_door_red_open</sprite>
+      <sprite>sprites\spr_door_green_open</sprite>
+      <sprite>sprites\spr_door_open</sprite>
+      <sprite>sprites\spr_door2_open</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Player Scripts">
