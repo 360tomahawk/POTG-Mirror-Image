@@ -57,6 +57,11 @@ if(global.TimerLimitSec &lt;= 0)
     global.TimerLimitSec = 0;
     game_end();
 }
+
+if(keyboard_check_pressed(ord("R")))
+{
+    room_restart();
+}
 </string>
           </argument>
         </arguments>
