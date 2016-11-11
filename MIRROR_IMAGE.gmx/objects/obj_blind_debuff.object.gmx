@@ -27,8 +27,7 @@
             <kind>1</kind>
             <string>///initialise variables
 
-isSteppedByPlayerTwo = false;
-isSteppedByPlayerOne = false;
+isStepped = false;
 isActivate = false;
 
 </string>
@@ -54,28 +53,16 @@ isActivate = false;
           <argument>
             <kind>1</kind>
             <string>///give player a blindness debuff
-
-if(place_meeting(x,y,obj_Player) == true)
+var i;
+if(place_meeting(x,y,obj_players) == true)
 {
-    isSteppedByPlayerOne = true;
+    isStepped = true;
+    i = instance_nearest(x,y, obj_players);
 }
 
-if(place_meeting(x,y,obj_oPlayer) == true)
+if(isStepped == true)
 {
-    isSteppedByPlayerTwo = true;
-}
-
-
-if(isSteppedByPlayerOne == true || isSteppedByPlayerTwo == true)
-{
-    if(isSteppedByPlayerOne == true)
-    {
-        instance_create(obj_Player.x, obj_Player.y, obj_blindness);
-    }
-    else if(isSteppedByPlayerTwo == true)
-    {
-        instance_create(obj_oPlayer.x, obj_oPlayer.y, obj_blindness);
-    }
+    instance_create(i.x, i.y, obj_blindness);
     instance_destroy();
 }
 </string>

@@ -65,6 +65,17 @@ if (keyboard_check_pressed(vk_up))
     zeSelectionsStuff = max(zeSelectionsStuff-1,0);
 }
 
+if (keyboard_check_pressed(vk_enter))
+{
+    switch (zeSelectionsStuff)
+    {
+    case SelectionMenu.START:
+    room_goto_next();
+    break;
+    default:
+    break;
+    }
+}
 </string>
           </argument>
         </arguments>

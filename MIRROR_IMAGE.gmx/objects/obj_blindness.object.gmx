@@ -51,22 +51,14 @@ timeLimitForBuff = 0;
           <argument>
             <kind>1</kind>
             <string>// update pos of the blindness
-event_inherited();
-if(isSteppedByPlayerOne == true)
-{
-    x = obj_Player.x;
-    y = obj_Player.y;
-}
-else if(isSteppedByPlayerTwo == true)
-{
-    x = obj_oPlayer.x;
-    y = obj_oPlayer.y;
-}
+x = instance_nearest(x, y, obj_players).x;
+y = instance_nearest(x, y, obj_players).y;
 
-timeLimitForBuff += 3;
-if(timeLimitForBuff &gt;= 3)
+timeLimitForBuff += room_speed;
+
+if(timeLimitForBuff &gt; (3 * (room_speed * room_speed)))
 {
-   instance_destroy();
+    instance_destroy();
 }
 
 

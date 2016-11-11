@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>zeCountingTimeSec = 800;
 zeTimer = 0;
-room_wid = (room_width * 0.1);
+room_wid = (room_width * 0.15);
 room_hei = (room_height * 0.8);
 </string>
           </argument>

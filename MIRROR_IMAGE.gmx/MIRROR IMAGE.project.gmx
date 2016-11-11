@@ -24,6 +24,13 @@
       <sprite>sprites\spr_mask</sprite>
       <sprite>sprites\spr_tail</sprite>
     </sprites>
+    <sprites name="Burdens">
+      <sprite>sprites\spr_blind_debuff</sprite>
+      <sprite>sprites\spr_blindness</sprite>
+      <sprite>sprites\spr_pitfall_1</sprite>
+      <sprite>sprites\spr_pitfall_2</sprite>
+      <sprite>sprites\spr_pitfall_3</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -57,18 +64,26 @@
         <object>objects\obj_lensTail</object>
       </objects>
     </objects>
-    <object>objects\obj_collidable_parent</object>
     <objects name="Main Menu Stuff">
       <object>objects\obj_Main_Title</object>
       <object>objects\obj_Main_Selection</object>
+    </objects>
+    <object>objects\obj_collidable_parent</object>
+    <object>objects\obj_players</object>
+    <objects name="Burdens">
+      <object>objects\obj_blindness</object>
+      <object>objects\obj_pitfall_1</object>
+      <object>objects\obj_pitfall_3</object>
+      <object>objects\obj_blind_debuff</object>
+      <object>objects\obj_pitfall_2</object>
     </objects>
     <objects name="GUI Stuff">
       <object>objects\obj_timer</object>
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_level1</room>
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_level1</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
   </rooms>
