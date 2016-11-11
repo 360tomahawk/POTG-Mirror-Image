@@ -25,14 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>rooms_wid = (room_width/2);
-rooms_hei = (room_height/2);
+            <string>zeOptionSelection = OptionsSelection.SOUND_VOL;
+zeListOfStr[OptionsSelection.BACK] = "BACK";
+zeListOfStr[OptionsSelection.SOUND_VOL] = "SOUND:";
 
-zeSelectionsStuff = SelectionMenu.START;
-zeSelectionListStr[SelectionMenu.EXIT] = "EXIT";
-zeSelectionListStr[SelectionMenu.OPTION] = "OPTION"; 
-zeSelectionListStr[SelectionMenu.START] = "START GAME";
-FontSize = 0.8;
+FontSize = 1;
 </string>
           </argument>
         </arguments>
@@ -55,33 +52,32 @@ FontSize = 0.8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (keyboard_check_pressed(vk_down))
+            <string>if (keyboard_check_pressed(vk_up))
 {
-    zeSelectionsStuff = min(zeSelectionsStuff+1,SelectionMenu.TOTAL_SELECTIONS-1);
+    zeOptionSelection = max(zeOptionSelection-1, 0);
 }
 
-if (keyboard_check_pressed(vk_up))
+if (keyboard_check_pressed(vk_down))
 {
-    zeSelectionsStuff = max(zeSelectionsStuff-1,0);
+    zeOptionSelection = min(zeOptionSelection+1, OptionsSelection.TOTAL_SELECTIONS-1);
 }
 
 if (keyboard_check_pressed(vk_enter))
 {
-    switch (zeSelectionsStuff)
+    switch (zeOptionSelection)
     {
-        case SelectionMenu.START:
-        {
-            room_goto_next();
-            break;
-        }
-        case SelectionMenu.OPTION:
-        room_goto(rm_options_menu);
-        break;
-        case SelectionMenu.EXIT:
-        game_end();
-        break;
-        default:
-        break;
+    case OptionsSelection.SOUND_VOL:
+    {
+        global.TurnOnSound = !global.TurnOnSound;
+    }
+    break;
+    case OptionsSelection.BACK:
+    {
+        room_goto(rm_main_menu);
+    }
+    break;
+    default:
+    break;
     }
 }
 </string>
@@ -108,19 +104,39 @@ if (keyboard_check_pressed(vk_enter))
             <kind>1</kind>
             <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-var theHeightOfArray = rooms_hei;
+draw_text_transformed_colour(room_width * 0.5, room_height*0.2, "OPTIONS", 2,2,0,c_lime,c_lime,c_lime,c_lime,1);
+
 var num = 0;
-repeat(SelectionMenu.TOTAL_SELECTIONS)
+var offSetYPosCount = 0;
+var offSetYPos = 60;
+repeat (OptionsSelection.TOTAL_SELECTIONS)
 {
-    draw_text_transformed_colour(rooms_wid, theHeightOfArray, zeSelectionListStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
-    theHeightOfArray += 60;
+    //draw_text_transformed_colour(room_width*0.5,room_height*0.4+offSetYPos,zeListOfStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
+    switch (num)
+    {
+    case OptionsSelection.SOUND_VOL:
+    {
+        var zeStr = "TRUE";
+        if (!global.TurnOnSound)
+            zeStr = "FALSE";
+        
+      draw_text_transformed_colour(room_width*0.5,room_height*0.4+offSetYPosCount,zeListOfStr[num]+zeStr,FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);      
+    }
+    break;
+    
+    default:
+    draw_text_transformed_colour(room_width*0.5,room_height*0.4+offSetYPosCount,zeListOfStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
+    break;
+    }
     ++num;
+    offSetYPosCount += offSetYPos;
 }
+
 var zedefaultFontSize = font_get_size(fnt_default);
 var offSet = 0.75;
-var zeStrLength = offSet * (string_length(zeSelectionListStr[zeSelectionsStuff]) * FontSize * zedefaultFontSize * 0.5);
-draw_sprite(spr_player,0,rooms_wid-zeStrLength, rooms_hei + (zeSelectionsStuff*60));
-draw_sprite(spr_oPlayer,0,rooms_wid+zeStrLength, rooms_hei + (zeSelectionsStuff*60));
+var zeStrLength = offSet * (string_length(zeListOfStr[zeOptionSelection]) * FontSize * zedefaultFontSize * 0.5);
+draw_sprite(spr_player,0,(room_width*0.5)-zeStrLength, (room_height*0.4) + (zeOptionSelection*offSetYPos));
+draw_sprite(spr_oPlayer,0,(room_width*0.5)+zeStrLength, (room_height*0.4) + (zeOptionSelection*offSetYPos));
 </string>
           </argument>
         </arguments>

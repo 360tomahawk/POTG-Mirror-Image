@@ -43,7 +43,7 @@
     </scripts>
     <script>scripts\scr_depth.gml</script>
     <scripts name="GUI Stuff">
-      <script>scripts\scr_creating_Timer.gml</script>
+      <script>scripts\scr_initialized_globalVar.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -86,14 +86,18 @@
     </objects>
     <object>objects\obj_green_door</object>
     <object>objects\obj_red_door</object>
+    <objects name="Option Menu Stuff">
+      <object>objects\obj_Option_Selection</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_level1</room>
     <room>rooms\rm_level2</room>
     <room>rooms\rm_level3</room>
-    <room>rooms\rm_test</room>
+    <room>rooms\rm_options_menu</room>
     <room>rooms\rm_template</room>
+    <room>rooms\rm_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
