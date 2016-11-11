@@ -3,7 +3,7 @@
   <spriteName>spr_blindness</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1000</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>obj_blind_debuff</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -53,7 +53,7 @@ timeLimitForBuff = 0;
             <string>// update pos of the blindness
 x = instance_nearest(x, y, obj_players).x;
 y = instance_nearest(x, y, obj_players).y;
-
+depth = instance_nearest(x, y, obj_players).depth - 5;
 timeLimitForBuff += room_speed;
 
 if(timeLimitForBuff &gt; (3 * (room_speed * room_speed)))
