@@ -35,11 +35,7 @@
     <script>scripts\scr_depth.gml</script>
     <script>scripts\scr_simpleTile.gml</script>
   </scripts>
-  <fonts name="fonts">
-    <font>fonts\fnt_default</font>
-  </fonts>
   <objects name="objects">
-    <object>objects\obj_collidable_parent</object>
     <objects name="Players">
       <object>objects\obj_Player</object>
       <object>objects\obj_oPlayer</object>
@@ -58,11 +54,17 @@
         <object>objects\obj_lensTail</object>
       </objects>
     </objects>
+    <object>objects\obj_collidable_parent</object>
+    <objects name="Main Menu Stuff">
+      <object>objects\obj_Main_Title</object>
+      <object>objects\obj_Main_Selection</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_level1</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
+    <room>rooms\rm_main_menu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
