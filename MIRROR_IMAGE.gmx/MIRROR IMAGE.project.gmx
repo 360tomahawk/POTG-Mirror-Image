@@ -57,7 +57,6 @@
     <objects name="Main Menu Stuff">
       <object>objects\obj_Main_Title</object>
       <object>objects\obj_Main_Selection</object>
-      <object>objects\obj_Player_Selection</object>
     </objects>
   </objects>
   <rooms name="rooms">
