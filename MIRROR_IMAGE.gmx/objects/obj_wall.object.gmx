@@ -36,7 +36,7 @@ if(y == room_height - half_size)
 }
 else if(y == half_size)
 {   
-    if(x &gt; 32 &amp;&amp; x &lt; room_width - 32)
+    if(x &gt; half_size &amp;&amp; x &lt; room_width - half_size)
     {
         image_index = 1;
     }
