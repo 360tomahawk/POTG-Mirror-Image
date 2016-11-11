@@ -54,7 +54,7 @@ elapsedTime = 0;
           <argument>
             <kind>1</kind>
             <string>elapsedTime += 1/room_speed;
-if(elapsedTime &gt; 10)
+if(elapsedTime &gt; 20)
 {
     global.fogged = false;
 }
