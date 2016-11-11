@@ -63,6 +63,7 @@ if(place_meeting(x,y,obj_players) == true)
 if(isStepped == true)
 {
     instance_create(i.x, i.y, obj_blindness);
+    audio_play_sound(snd_debuff,0,0);
     instance_destroy();
 }
 </string>

@@ -4,7 +4,15 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_swapping</sound>
+    <sound>sound\snd_pitfall</sound>
+    <sound>sound\snd_key</sound>
+    <sound>sound\snd_debuff</sound>
+    <sound>sound\snd_losing</sound>
+    <sound>sound\snd_nextLevel</sound>
+    <sound>sound\snd_selection</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Players">
       <sprite>sprites\spr_player</sprite>
