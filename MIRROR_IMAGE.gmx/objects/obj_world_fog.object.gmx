@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-2000</depth>
-  <persistent>-1</persistent>
+  <depth>-100</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,56 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = (room_width * 0.15);
-y = (room_height * 0.8);
-FontSize = 1.5;
+            <string>res = 10;
+sFog = surface_create(room_width/res, room_height/res);
 
-isPlaying = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.TimerLimitSec -= (1/room_speed);
+surface_set_target(sFog);
 
-if(isPlaying == false)
-{
-    audio_stop_sound(snd_mainmenu);
-    audio_play_sound(snd_ingame,0,true);
-    isPlaying = true;
-}
-if(global.TimerLimitSec &lt;= 0)
-{
-    global.TimerLimitSec = 0;
-    game_end();
-}
+draw_clear(c_black);
 
-if(keyboard_check_pressed(ord("R")))
-{
-    if(isPlaying == true)
-    {
-        isPlaying = false;
-        audio_stop_sound(snd_ingame);
-    }
-    room_restart();
-}
+surface_reset_target();
 </string>
           </argument>
         </arguments>
@@ -97,7 +55,8 @@ if(keyboard_check_pressed(ord("R")))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_transformed_colour(x,y,string(int64(global.TimerLimitSec)), FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,0.5);
+            <string>draw_surface_ext(sFog,0,0,res,res,0,0,1);
+
 </string>
           </argument>
         </arguments>

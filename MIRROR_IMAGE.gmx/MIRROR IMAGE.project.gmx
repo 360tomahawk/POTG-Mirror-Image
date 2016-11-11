@@ -12,6 +12,8 @@
     <sound>sound\snd_losing</sound>
     <sound>sound\snd_nextLevel</sound>
     <sound>sound\snd_selection</sound>
+    <sound>sound\snd_mainmenu</sound>
+    <sound>sound\snd_ingame</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Players">
