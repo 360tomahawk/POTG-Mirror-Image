@@ -10,18 +10,14 @@
   <persistent>-1</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>enum SelectionMenu
+  <code>enum OptionsSelection
 {
-    START=0,
-    OPTION,
-    EXIT,
+    SOUND_VOL = 0,
+    BACK,
     TOTAL_SELECTIONS,
-};
-draw_set_font(fnt_default);
-scr_initialized_globalVar();
+}
 
-instance_create(0, 0, obj_Main_Title);
-instance_create(0, 0, obj_Main_Selection);</code>
+instance_create(0, 0, obj_Option_Selection);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
