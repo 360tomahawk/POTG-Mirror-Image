@@ -58,11 +58,13 @@ FontSize = 0.8;
             <string>if (keyboard_check_pressed(vk_down))
 {
     zeSelectionsStuff = min(zeSelectionsStuff+1,SelectionMenu.TOTAL_SELECTIONS-1);
+    audio_play_sound(snd_selection,0,false);
 }
 
 if (keyboard_check_pressed(vk_up))
 {
     zeSelectionsStuff = max(zeSelectionsStuff-1,0);
+    audio_play_sound(snd_selection,0,false);
 }
 
 if (keyboard_check_pressed(vk_enter))
@@ -71,15 +73,22 @@ if (keyboard_check_pressed(vk_enter))
     {
         case SelectionMenu.START:
         {
+            audio_play_sound(snd_selection,0,false);
             room_goto(rm_level1);
             break;
         }
         case SelectionMenu.OPTION:
-        room_goto(rm_options_menu);
-        break;
+        {
+            audio_play_sound(snd_selection,0,false);
+            room_goto(rm_options_menu);
+            break;
+        }
         case SelectionMenu.EXIT:
-        game_end();
-        break;
+        {
+            audio_play_sound(snd_selection,0,false);
+            game_end();
+            break;
+        }
         default:
         break;
     }
