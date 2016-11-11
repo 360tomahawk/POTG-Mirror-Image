@@ -50,6 +50,7 @@
             <kind>1</kind>
             <string>if(place_meeting(x,y, obj_Player) &amp;&amp; place_meeting(x,y, obj_oPlayer))
 {
+    audio_play_sound(snd_nextLevel,0,0);
     room_goto_next();
 }
 </string>
