@@ -27,7 +27,6 @@
     <sprites name="Environment">
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\spr_nextlvl</sprite>
-      <sprite>sprites\spr_square_mask</sprite>
       <sprite>sprites\spr_wall2</sprite>
     </sprites>
     <sprites name="Fluff">
