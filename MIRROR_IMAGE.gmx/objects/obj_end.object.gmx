@@ -179,7 +179,7 @@ var num = 0;
 var howMuchOffset = 60;
 var OffsetYPos = 0;
 
-draw_text_transformed_colour(room_width*0.5,room_height*0.2, displayTitle, 2,2,0,c_lime,c_lime,c_lime,c_lime,1);
+draw_text_transformed_colour(room_width*0.5,room_height*0.1, displayTitle, 2,2,0,c_lime,c_lime,c_lime,c_lime,1);
 draw_text_transformed_colour(room_width*0.5,room_height*0.3,"HIGHSCORE", 1,1,0,c_lime,c_lime,c_lime,c_lime,1);
 
 repeat (array_length_1d(ListOfArrays))
