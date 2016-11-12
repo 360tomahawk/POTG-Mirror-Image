@@ -61,6 +61,10 @@ if(global.timeelapsedStage &gt; 45)
 {
     weHaveIssues = true;
 }
+else
+{
+    weHaveIssues = false;
+}
 
 if(
 room == rm_main_menu ||
