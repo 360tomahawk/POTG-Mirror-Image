@@ -32,6 +32,7 @@ FontSize = 1.5;
 isPlaying = false;
 weHaveIssues = false;
 global.timeelapsedStage = 0;
+global.timeelapsedHELP = 0;
 </string>
           </argument>
         </arguments>
@@ -55,15 +56,24 @@ global.timeelapsedStage = 0;
           <argument>
             <kind>1</kind>
             <string>global.TimerLimitSec -= (1/room_speed);
-global.timeelapsedStage += (1/room_speed);
 
-if(global.timeelapsedStage &gt; 45)
+if(weHaveIssues)
 {
-    weHaveIssues = true;
+    global.timeelapsedHELP += (1/room_speed);
+    if(global.timeelapsedHELP &gt; 5)
+    {
+        global.timeelapsedStage = 0;
+        weHaveIssues = false;
+    }
 }
 else
 {
-    weHaveIssues = false;
+    global.timeelapsedStage += (1/room_speed);
+    if(global.timeelapsedStage &gt; 45)
+    {
+        global.timeelapsedHELP = 0;
+        weHaveIssues = true;
+    }
 }
 
 if(
