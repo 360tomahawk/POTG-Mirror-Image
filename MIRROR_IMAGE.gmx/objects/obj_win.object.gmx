@@ -3,12 +3,12 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-100</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,14 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>res = 10;
-sFog = surface_create(room_width/res, room_height/res);
-
-surface_set_target(sFog);
-
-draw_clear(c_black);
-
-surface_reset_target();
+            <string>if (keyboard_check_pressed(vk_enter))
+    room_goto(rm_main_menu);
 </string>
           </argument>
         </arguments>
@@ -55,7 +49,11 @@ surface_reset_target();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_surface_ext(sFog,0,0,res,res,0,0,1);
+            <string>draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_text_transformed_colour(room_width*0.5,room_height*0.2,"YOU WON!", 2,2,0,c_lime,c_lime,c_lime,c_lime,1);
+var theBackButton = "BACK TO MAIN MENU";
+draw_text_transformed_colour(room_width*0.5,room_height*0.4,theBackButton,1,1,0,c_lime,c_lime,c_lime,c_lime,1);
 
 </string>
           </argument>

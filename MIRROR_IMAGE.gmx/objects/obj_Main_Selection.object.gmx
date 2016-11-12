@@ -75,6 +75,8 @@ if (keyboard_check_pressed(vk_enter))
         {
             audio_play_sound(snd_selection,0,false);
             room_goto(rm_level1);
+            //room_goto(rm_end);
+            //room_goto(rm_win);
             break;
         }
         case SelectionMenu.OPTION:
@@ -126,7 +128,7 @@ repeat(SelectionMenu.TOTAL_SELECTIONS)
     ++num;
 }
 var zedefaultFontSize = font_get_size(fnt_default);
-var offSet = 0.75;
+var offSet = 0.5;
 var zeStrLength = offSet * (string_length(zeSelectionListStr[zeSelectionsStuff]) * FontSize * zedefaultFontSize * 0.5);
 draw_sprite(spr_player,0,rooms_wid-zeStrLength, rooms_hei + (zeSelectionsStuff*60));
 draw_sprite(spr_oPlayer,0,rooms_wid+zeStrLength, rooms_hei + (zeSelectionsStuff*60));

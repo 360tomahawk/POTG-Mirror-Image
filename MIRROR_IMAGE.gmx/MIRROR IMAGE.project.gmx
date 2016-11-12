@@ -66,6 +66,7 @@
       <script>scripts\scr_initialized_globalVar.gml</script>
     </scripts>
     <script>scripts\scr_fogged_draw.gml</script>
+    <script>scripts\scr_proceed_nxtLvL.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -96,6 +97,12 @@
       <objects name="GUI Stuff">
         <object>objects\obj_timer</object>
       </objects>
+      <objects name="The End Stuff">
+        <object>objects\obj_end</object>
+      </objects>
+      <objects name="The Win Stuff">
+        <object>objects\obj_win</object>
+      </objects>
     </objects>
     <objects name="Burdens">
       <object>objects\obj_pitfall_1</object>
@@ -115,13 +122,15 @@
   <rooms name="rooms">
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_options_menu</room>
+    <room>rooms\rm_win</room>
+    <room>rooms\rm_end</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
     <room>rooms\rm_level1</room>
     <room>rooms\rm_level2</room>
     <room>rooms\rm_level3</room>
     <room>rooms\rm_level4</room>
-    <room>rooms\rm_level5</room>
+    <room>rooms\rm_level6</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
