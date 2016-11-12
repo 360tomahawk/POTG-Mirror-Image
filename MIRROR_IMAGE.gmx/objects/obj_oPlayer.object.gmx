@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>movespeed = 4;
-
+image_speed = room_speed;
 key_left = 0;
 key_right = 0;
 key_up = 0;
@@ -58,10 +58,7 @@ hsp = 0;
             <kind>1</kind>
             <string>//simple movement
 scr_oplayerMove();
-if(!global.fogged)
 scr_depth();
-else
-depth = -1000;
 
 x += hsp;
 y += vsp;
