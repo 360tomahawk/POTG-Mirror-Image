@@ -192,7 +192,7 @@ repeat (array_length_1d(ListOfArrays))
 var theStr = "BACK TO MAIN MENU";
 draw_text_transformed_colour(room_width*0.5,(room_height*0.4) + OffsetYPos, theStr,1,1,0,c_lime,c_lime,c_lime,c_lime,1);
 
-var offSet = 0.4;
+var offSet = 0.68;
 var zedefaultFontSize = font_get_size(fnt_default);
 var zeStrLength = offSet * (string_length(theStr) * zedefaultFontSize * 0.5);
 draw_sprite(spr_player,0,(room_width*0.5)-zeStrLength, (room_height*0.4) + OffsetYPos);
