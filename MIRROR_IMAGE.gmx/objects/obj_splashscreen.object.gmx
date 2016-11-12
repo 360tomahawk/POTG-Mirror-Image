@@ -28,7 +28,7 @@
             <string>zeStartTimerSec = 0;
 zeStrList[NumberOfLines.MECHANIC_STOPPER] = "- RED &amp; GREEN STOPPER: Will only allow the tomodachi #with the SAME hair color to pass through";
 zeStrList[NumberOfLines.MECHANIC_SWAPPER] = "- SWAPPER: Swaps the positions of the tomodachis";
-zeStrList[NumberOfLines.MECHANIC_KEYS] = "- RED &amp; GREEN KEYS: Opens Respective Doors pon pick up";
+zeStrList[NumberOfLines.MECHANIC_KEYS] = "- RED &amp; GREEN KEYS: Opens Respective Doors when picked up";
 zeStrList[NumberOfLines.MECHANIC_PITFALL] = "- PITFALL: Degrades with each time being stepped over. #Once broken, cannot be crossed";
 zeStrList[NumberOfLines.MECHANIC_BLIND] = "- BLIND: Vision is affected for 20 seconds";
 zeStrList[NumberOfLines.MECHANIC_NEXTLVL] = "-NXTLVL: Sends the tomodachis to the next level";

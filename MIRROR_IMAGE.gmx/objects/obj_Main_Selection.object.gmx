@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>rooms_wid = (room_width/2);
-rooms_hei = (room_height/2);
+rooms_hei = (room_height*0.7);
 
 zeSelectionsStuff = SelectionMenu.START;
 zeSelectionListStr[SelectionMenu.EXIT] = "EXIT";

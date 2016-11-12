@@ -54,6 +54,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\Title_Screen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -89,7 +90,6 @@
     </objects>
     <objects name="GUI">
       <objects name="Main Menu Stuff">
-        <object>objects\obj_Main_Title</object>
         <object>objects\obj_Main_Selection</object>
       </objects>
       <objects name="Option Menu Stuff">
