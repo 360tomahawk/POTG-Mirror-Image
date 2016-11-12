@@ -101,6 +101,9 @@
       <objects name="The End Stuff">
         <object>objects\obj_end</object>
       </objects>
+      <objects name="Splash Screen Stuff">
+        <object>objects\obj_splashscreen</object>
+      </objects>
     </objects>
     <objects name="Burdens">
       <object>objects\obj_blind</object>
@@ -119,6 +122,7 @@
     <object>objects\obj_players</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_splashscreen</room>
     <room>rooms\rm_main_menu</room>
     <room>rooms\rm_options_menu</room>
     <room>rooms\rm_win</room>
