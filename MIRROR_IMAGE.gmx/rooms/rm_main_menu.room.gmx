@@ -19,18 +19,10 @@
 };
 draw_set_font(fnt_default);
 scr_initialized_globalVar();
-
 instance_create(0, 0, obj_Main_Title);
 instance_create(0, 0, obj_Main_Selection);
-var isPlaying = false;
 
-if(isPlaying == false)
-{
-    audio_play_sound(snd_mainmenu,0,1);
-    isPlaying = true;
-}
-
-audio_stop_sound(snd_ingame);</code>
+randomize();</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

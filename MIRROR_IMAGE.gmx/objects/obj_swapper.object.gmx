@@ -39,7 +39,11 @@ if(place_meeting(x,y,obj_players))
     obj_oPlayer.y = player1PosY;
     if(!tempbool)
     {
-        audio_play_sound(snd_swapping,0, false);
+        if(global.TurnOnSound)
+    {
+    audio_play_sound(snd_swapping,0, false);
+    }
+        
         tempbool = true;
     }
     instance_destroy();

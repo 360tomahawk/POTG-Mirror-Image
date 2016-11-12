@@ -55,13 +55,19 @@ FontSize = 1;
             <string>if (keyboard_check_pressed(vk_up))
 {
     zeOptionSelection = max(zeOptionSelection-1, 0);
-    audio_play_sound(snd_selection,0,false);
+    if(global.TurnOnSound)
+        {
+        audio_play_sound(snd_selection,0,false);
+        }
 }
 
 if (keyboard_check_pressed(vk_down))
 {
     zeOptionSelection = min(zeOptionSelection+1, OptionsSelection.TOTAL_SELECTIONS-1);
-    audio_play_sound(snd_selection,0,false);
+    if(global.TurnOnSound)
+        {
+        audio_play_sound(snd_selection,0,false);
+        }
 }
 
 if (keyboard_check_pressed(vk_enter))
@@ -71,12 +77,25 @@ if (keyboard_check_pressed(vk_enter))
     case OptionsSelection.SOUND_VOL:
     {
         global.TurnOnSound = !global.TurnOnSound;
-        audio_play_sound(snd_selection,0,false);
+        if(!global.TurnOnSound)
+        {
+            sound_global_volume(0);
+            audio_pause_all();
+        }
+        else
+        {
+            audio_play_sound(snd_selection,0,false);
+            sound_global_volume(1);
+            audio_resume_all();
+        }
         break;
     }
     case OptionsSelection.BACK:
     {
+        if(global.TurnOnSound)
+        {
         audio_play_sound(snd_selection,0,false);
+        }
         room_goto(rm_main_menu);
         break;
     }
