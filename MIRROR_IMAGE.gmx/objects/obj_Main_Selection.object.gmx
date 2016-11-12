@@ -141,7 +141,7 @@ repeat(SelectionMenu.TOTAL_SELECTIONS)
     ++num;
 }
 var zedefaultFontSize = font_get_size(fnt_default);
-var offSet = 0.5;
+var offSet = 0.75;
 var zeStrLength = offSet * (string_length(zeSelectionListStr[zeSelectionsStuff]) * FontSize * zedefaultFontSize * 0.5);
 draw_sprite(spr_player,0,rooms_wid-zeStrLength, rooms_hei + (zeSelectionsStuff*60));
 draw_sprite(spr_oPlayer,0,rooms_wid+zeStrLength, rooms_hei + (zeSelectionsStuff*60));
