@@ -28,7 +28,18 @@ else
 key_down = 0;
 
 hsp = (key_left + key_right) * -movespeed;
-image_xscale = sign(hsp);
+if(hsp != 0)
+{
+    image_xscale = -sign(hsp);
+}
+if(hsp == 0 && vsp == 0)
+{
+    image_speed = 0;
+}
+else
+{
+    image_speed = 4/room_speed;
+}
 vsp = (key_up + key_down) * movespeed;
 
 //--------------------------------
