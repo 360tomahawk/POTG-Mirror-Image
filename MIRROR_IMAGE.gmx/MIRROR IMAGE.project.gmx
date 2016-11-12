@@ -36,7 +36,6 @@
     </sprites>
     <sprites name="Burdens">
       <sprite>sprites\spr_blind_debuff</sprite>
-      <sprite>sprites\spr_blindness</sprite>
       <sprite>sprites\spr_pitfall_1</sprite>
       <sprite>sprites\spr_pitfall_2</sprite>
       <sprite>sprites\spr_pitfall_3</sprite>
@@ -45,8 +44,8 @@
       <sprite>sprites\spr_key_green</sprite>
       <sprite>sprites\spr_door_green</sprite>
       <sprite>sprites\spr_swapper</sprite>
-      <sprite>sprites\spr_door</sprite>
-      <sprite>sprites\spr_door2</sprite>
+      <sprite>sprites\spr_red_stopper</sprite>
+      <sprite>sprites\spr_green_stopper</sprite>
       <sprite>sprites\spr_door_red_open</sprite>
       <sprite>sprites\spr_door_green_open</sprite>
       <sprite>sprites\spr_door_open</sprite>
