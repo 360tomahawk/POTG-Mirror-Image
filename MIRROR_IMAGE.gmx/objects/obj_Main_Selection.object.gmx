@@ -136,7 +136,7 @@ var theHeightOfArray = rooms_hei;
 var num = 0;
 repeat(SelectionMenu.TOTAL_SELECTIONS)
 {
-    draw_text_transformed_colour(rooms_wid, theHeightOfArray, zeSelectionListStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(rooms_wid, theHeightOfArray, zeSelectionListStr[num],FontSize,FontSize,0,c_black,c_black,c_black,c_black,1);
     theHeightOfArray += 60;
     ++num;
 }

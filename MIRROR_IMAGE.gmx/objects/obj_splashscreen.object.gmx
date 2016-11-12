@@ -93,7 +93,7 @@ if (zeStartTimerSec &gt; 2)
           <argument>
             <kind>1</kind>
             <string>draw_set_alpha(0.7);
-draw_rectangle_colour(0,0,room_width,room_height,c_black,c_black,c_black,c_black,false);
+draw_rectangle_colour(0,0,room_width,room_height,c_gray,c_gray,c_gray,c_gray,false);
 draw_set_alpha(1);
 
 draw_set_halign(fa_left);
@@ -103,7 +103,7 @@ var offsetY = 0;
 var offsetYbyHowMuch = 36;
 repeat (NumberOfLines.TOTAL_LINES)
 {
-    draw_text_transformed_colour(room_width*0.1, (room_height*0.02)+offsetY, zeStrList[num], 0.35,0.35,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(room_width*0.1, (room_height*0.02)+offsetY, zeStrList[num], 0.35,0.35,0,c_black,c_black,c_black,c_black,1);
     offsetY += offsetYbyHowMuch;
     offsetY += (offsetYbyHowMuch * string_count("#",zeStrList[num]));
     ++num;
@@ -113,7 +113,7 @@ draw_set_halign(fa_middle);
 draw_set_valign(fa_middle);
 if (zeStartTimerSec &gt; 2)
 {
-    draw_text_transformed_colour(room_width*0.5, room_height*0.95,"PRESS ENTER TO CONTINUE",0.85,0.85,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(room_width*0.5, room_height*0.95,"PRESS ENTER TO CONTINUE",0.85,0.85,0,c_black,c_black,c_black,c_black,1);
 }
 
 </string>
