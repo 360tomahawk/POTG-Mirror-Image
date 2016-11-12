@@ -27,36 +27,75 @@
             <kind>1</kind>
             <string>ini_open("SaveFile.sav");
 var playerScore = global.PlayerScore;
-ListOfArrays = ds_list_create();
+ListOfArrays[4] = 0;
+
 if (ini_key_exists("Save","NumPlayers"))
 {
-    var num = 0;  
+    var num;  
     num = ini_read_real("Save", "NumPlayers",0);
-    repeat (num)
+    var needToCheckForPlayerScore = false;
+    if (num &gt;= 5) 
+        needToCheckForPlayerScore = true;
+    else
+        ListOfArrays[4] = playerScore;
+    
+    var numbersNeedToRepeat = num;
+    repeat (num-1)
     {
-        ds_list_add(ListOfArrays, ini_read_real("Save", string(num),0));
+        ListOfArrays[num-1] = ini_read_real("Save", string(num-1),0);
         --num;   
     }
-    for (var num2 = 0; num2 &lt; ds_list_size(ListOfArrays); ++num2)
+    var CurrentLowestVal = ListOfArrays[0];
+    var startCountingDown = 0;
+    var whichPosToSwap;
+    repeat (array_length_1d(ListOfArrays))
     {
-        if (ListOfArrays[| num2] &lt; playerScore)
+        for (var zeNum = startCountingDown; zeNum &lt; array_length_1d(ListOfArrays); ++zeNum)
         {
-            ds_list_insert(ListOfArrays, num2-1, playerScore);
-            break;
+            if (CurrentLowestVal &lt; ListOfArrays[zeNum])
+            {
+                CurrentLowestVal = ListOfArrays[zeNum];
+                whichPosToSwap = zeNum;
+            }
         }
-        else if (ListOfArrays[| num2] == playerScore)
-            break;
+        if (ListOfArrays[startCountingDown] &gt; CurrentLowestVal)
+        {
+            var toSwap = ListOfArrays[startCountingDown];
+            ListOfArrays[startCountingDown] = CurrentLowestVal;
+            ListOfArrays[whichPosToSwap] = toSwap;
+        }
+        ++startCountingDown;
+    }
+    if (needToCheckForPlayerScore)
+    {
+        for (var zeNum = 0; zeNum &lt; array_length_1d(ListOfArrays); ++zeNum)
+        {
+            if (playerScore &gt; ListOfArrays[zeNum])
+            {
+                var zeVal = ListOfArrays[zeNum];
+                ListOfArrays[zeNum] = playerScore;
+                for (var zeNum2 = zeNum+1; zeNum2 &lt; array_length_1d(ListOfArrays); ++zeNum2)
+                {
+                    var zeVal2 = zeVal;
+                    zeVal = ListOfArrays[zeNum2];
+                    ListOfArrays[zeNum2] = zeVal2;
+                }
+                break;
+            }
+        }
     }
 }
 else
 {
-    ds_list_add(ListOfArrays,playerScore);
+    ListOfArrays[0] = playerScore;
 }
-ini_write_real("Save", "NumPlayers", ds_list_size(ListOfArrays));
-for (var num = 0; num &lt; ds_list_size(ListOfArrays); ++num)
+ini_write_real("Save", "NumPlayers", array_length_1d(ListOfArrays));
+for (var num = 0; num &lt; array_length_1d(ListOfArrays); ++num)
 {
-    ini_write_real("Save", string(num), ListOfArrays[| num]);
+    ini_write_real("Save", string(num), ListOfArrays[num]);
 }
+
+//ini_section_delete('Save');
 ini_close();
 </string>
           </argument>
@@ -103,7 +142,11 @@ ini_close();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if (keyboard_check_pressed(vk_enter))
+{
+    room_goto(rm_main_menu);
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -127,17 +170,30 @@ ini_close();
             <kind>1</kind>
             <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-var num = 0;
+//var num = 0;
+num = array_length_1d(ListOfArrays)-1;
 var howMuchOffset = 60;
 var OffsetYPos = 0;
 draw_text_transformed_colour(room_width*0.5,room_height*0.2,"THE END", 2,2,0,c_lime,c_lime,c_lime,c_lime,1);
 draw_text_transformed_colour(room_width*0.5,room_height*0.3,"HIGHSCORE", 1,1,0,c_lime,c_lime,c_lime,c_lime,1);
+/*
 repeat (ds_list_size(ListOfArrays))
 {
-    draw_text_transformed_colour(room_width*0.5,room_height*0.4+OffsetYPos, string(num+1) + ". " + string(ListOfArrays[| num]), 1,1,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(room_width*0.5,(room_height*0.4)+OffsetYPos, string(num+1) + ". " + string(ListOfArrays[| num]), 1,1,0,c_lime,c_lime,c_lime,c_lime,1);
     OffsetYPos += howMuchOffset;
     ++num;
 }
+*/
+
+repeat (array_length_1d(ListOfArrays))
+{
+    draw_text_transformed_colour(room_width*0.5,(room_height*0.4)+OffsetYPos, string(num+1) + ". " + string(ListOfArrays[num]), 1,1,0,c_lime,c_lime,c_lime,c_lime,1);
+    OffsetYPos += howMuchOffset;
+    --num;
+}
+var theStr = "BACK";
+draw_text_transformed_colour(room_width*0.5,(room_height*0.4) + OffsetYPos, theStr,1,1,0,c_lime,c_lime,c_lime,c_lime,1);
+
 </string>
           </argument>
         </arguments>

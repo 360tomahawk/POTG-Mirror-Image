@@ -87,6 +87,9 @@
       <object>objects\obj_worldfog</object>
     </objects>
     <objects name="GUI">
+      <objects name="GUI Stuff">
+        <object>objects\obj_timer</object>
+      </objects>
       <objects name="Main Menu Stuff">
         <object>objects\obj_Main_Title</object>
         <object>objects\obj_Main_Selection</object>
@@ -94,8 +97,8 @@
       <objects name="Option Menu Stuff">
         <object>objects\obj_Option_Selection</object>
       </objects>
-      <objects name="GUI Stuff">
-        <object>objects\obj_timer</object>
+      <objects name="The End Stuff">
+        <object>objects\obj_end</object>
       </objects>
     </objects>
     <objects name="Burdens">
@@ -122,6 +125,7 @@
     <room>rooms\rm_level4</room>
     <room>rooms\rm_test</room>
     <room>rooms\rm_template</room>
+    <room>rooms\rm_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
