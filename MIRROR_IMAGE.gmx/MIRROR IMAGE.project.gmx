@@ -64,6 +64,7 @@
     <script>scripts\scr_depth.gml</script>
     <scripts name="GUI Stuff">
       <script>scripts\scr_initialized_globalVar.gml</script>
+      <script>scripts\scr_restart_someVariables.gml</script>
     </scripts>
     <script>scripts\scr_fogged_draw.gml</script>
     <script>scripts\scr_proceed_nxtLvL.gml</script>

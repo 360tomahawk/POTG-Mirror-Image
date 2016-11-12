@@ -128,6 +128,29 @@ ini_close();
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_restart_someVariables();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -160,17 +183,14 @@ repeat (array_length_1d(ListOfArrays))
     ++num;
 }
 
-/*
-var num = array_length_1d(ListOfArrays)-1;
-repeat (array_length_1d(ListOfArrays))
-{
-    draw_text_transformed_colour(room_width*0.5,(room_height*0.4)+OffsetYPos, string(num+1) + ". " + string(ListOfArrays[num]), 1,1,0,c_lime,c_lime,c_lime,c_lime,1);
-    OffsetYPos += howMuchOffset;
-    --num;
-}*/
-var theStr = "BACK";
+var theStr = "BACK TO MAIN MENU";
 draw_text_transformed_colour(room_width*0.5,(room_height*0.4) + OffsetYPos, theStr,1,1,0,c_lime,c_lime,c_lime,c_lime,1);
 
+var offSet = 0.4;
+var zedefaultFontSize = font_get_size(fnt_default);
+var zeStrLength = offSet * (string_length(theStr) * zedefaultFontSize * 0.5);
+draw_sprite(spr_player,0,(room_width*0.5)-zeStrLength, (room_height*0.4) + OffsetYPos);
+draw_sprite(spr_oPlayer,0,(room_width*0.5)+zeStrLength, (room_height*0.4) + OffsetYPos);
 </string>
           </argument>
         </arguments>
