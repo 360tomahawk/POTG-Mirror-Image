@@ -143,12 +143,12 @@ repeat (OptionsSelection.TOTAL_SELECTIONS)
         if (!global.TurnOnSound)
             zeStr = "FALSE";
         
-      draw_text_transformed_colour(room_width*0.5,room_height*0.4+offSetYPosCount,zeListOfStr[num]+zeStr,FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);      
+      draw_text_transformed_colour(room_width*0.5,room_height*0.7+offSetYPosCount,zeListOfStr[num]+zeStr,FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);      
     }
     break;
     
     default:
-    draw_text_transformed_colour(room_width*0.5,room_height*0.4+offSetYPosCount,zeListOfStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(room_width*0.5,room_height*0.7+offSetYPosCount,zeListOfStr[num],FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,1);
     break;
     }
     ++num;
