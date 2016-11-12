@@ -116,6 +116,73 @@ else
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///cheat keys
+
+if(keyboard_check_pressed(vk_numpad1))
+{
+    room_goto(rm_level1);
+    global.fogged = false;
+}
+else if(keyboard_check_pressed(vk_numpad2))
+{
+    room_goto(rm_level2);
+    global.fogged = false;
+}
+else if(keyboard_check_pressed(vk_numpad3))
+{
+    room_goto(rm_level3);
+    global.fogged = false;
+}
+else if(keyboard_check_pressed(vk_numpad4))
+{
+    room_goto(rm_level4);
+    global.fogged = false;
+}
+else if(keyboard_check_pressed(vk_numpad5))
+{
+    room_goto(rm_level5);
+    global.fogged = false;
+}
+else if(keyboard_check_pressed(vk_numpad6))
+{
+    room_goto(rm_level6);
+    global.fogged = false;
+}
+else if(keyboard_check_pressed(vk_add))
+{
+    global.TimerLimitSec = 800;
+}
+else if(keyboard_check_pressed(vk_subtract))
+{
+    global.TimerLimitSec = 5;
+}
+else if(keyboard_check_pressed(vk_multiply))
+{
+     scr_proceed_nxtLvL();
+}
+
+
+// room_goto(rm_level1);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
