@@ -26,6 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>zeStartTimerSec = 0;
+zeStrList[NumberOfLines.MECHANIC_STOPPER] = "- RED &amp; GREEN STOPPER: Will only allow the tomodachi with the SAME hair color to pass through";
+zeStrList[NumberOfLines.MECHANIC_SWAPPER] = "- SWAPPER: Swaps the positions of the tomodachis";
+zeStrList[NumberOfLines.MECHANIC_KEYS] = "- RED &amp; GREEN KEYS: Opens Respective Doors pon pick up";
+zeStrList[NumberOfLines.MECHANIC_PITFALL] = "- PITFALL: Degrades with each time being stepped over. Once broken, cannot be crossed";
+zeStrList[NumberOfLines.MECHANIC_BLIND] = "- BLIND: Vision is affected for 20 seconds";
+zeStrList[NumberOfLines.MECHANIC_NEXTLVL] = "-NXTLVL: Sends the tomodachis to the next level";
+zeStrList[NumberOfLines.MECHANIC_WALL] = "- WALL: Default wall";
+zeStrList[NumberOfLines.MECHANIC_TITLE] = "Blocks &amp; Mechanics:";
+zeStrList[NumberOfLines.CONTROLS_SELECT] = "Enter to select a choice (when applicable)#";
+zeStrList[NumberOfLines.CONTROLS_MOVE] = "Arrow keys to move up, down, left, or right respectively";
+zeStrList[NumberOfLines.CONTROLS_TITLE] = "Controls:";
+zeStrList[NumberOfLines.MESSAGE] = "This game will test your navigational abilities and how well you can coordinate 2 friends, #who are forced to mirror each other's HORIZONTAL movements, #while trying to escape a dungeon#";
+zeStrList[NumberOfLines.WELCOME] = "Welcome to TOMODACHI!#";
 </string>
           </argument>
         </arguments>
@@ -78,11 +91,23 @@ if (zeStartTimerSec &gt; 3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_center);
+            <string>draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
+var num = 0;
+var offsetY = 0;
+var offsetYbyHowMuch = 36;
+repeat (NumberOfLines.TOTAL_LINES)
+{
+    draw_text_transformed_colour(room_width*0.1, (room_height*0.02)+offsetY, zeStrList[num], 0.6,0.6,0,c_lime,c_lime,c_lime,c_lime,1);
+    offsetY += offsetYbyHowMuch;
+    offsetY += (offsetYbyHowMuch * string_count("#",zeStrList[num]));
+    ++num;
+}
+
+draw_set_halign(fa_middle);
 if (zeStartTimerSec &gt; 3)
 {
-    draw_text_transformed_colour(room_width*0.5, room_height*0.85,"PRESS ENTER TO CONTINUE",1.5,1.5,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(room_width*0.5, room_height*0.95,"PRESS ENTER TO CONTINUE",1.5,1.5,0,c_lime,c_lime,c_lime,c_lime,1);
 }
 </string>
           </argument>

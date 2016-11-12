@@ -11,7 +11,24 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>instance_create(0,0,obj_splashscreen);
-draw_set_font(fnt_default);</code>
+draw_set_font(fnt_default);
+enum NumberOfLines
+{
+    WELCOME,
+    MESSAGE,
+    CONTROLS_TITLE,
+    CONTROLS_MOVE,
+    CONTROLS_SELECT,
+    MECHANIC_TITLE,
+    MECHANIC_WALL,
+    MECHANIC_NEXTLVL,
+    MECHANIC_BLIND,
+    MECHANIC_PITFALL,
+    MECHANIC_KEYS,
+    MECHANIC_SWAPPER,
+    MECHANIC_STOPPER,
+    TOTAL_LINES,
+}</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
