@@ -103,7 +103,9 @@ if(keyboard_check_pressed(ord("R")))
         isPlaying = false;
         audio_stop_sound(snd_ingame);
     }
+    weHaveIssues = false;
     global.fogged = false;
+    global.timeelapsedStage = 0;
     room_restart();
 }
 
