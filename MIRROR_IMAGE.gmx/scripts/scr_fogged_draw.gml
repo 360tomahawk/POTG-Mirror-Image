@@ -1,5 +1,5 @@
 draw_self();
-if(global.fogged)
+if(global.fogged && instance_exists(obj_worldfog))
 {
     surface_set_target(obj_worldfog.sFog);
     draw_set_blend_mode( bm_src_color );
