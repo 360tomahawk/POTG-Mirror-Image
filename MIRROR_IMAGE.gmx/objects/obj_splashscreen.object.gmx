@@ -82,7 +82,7 @@ if (zeStartTimerSec &gt; 3)
 draw_set_valign(fa_middle);
 if (zeStartTimerSec &gt; 3)
 {
-    draw_text_transformed_colour(room_width*0.5, room_height*0.85,"PRESS ENTER TO CONTINUE",1.5,1.5,0,c_lime,c_lime,c_lime,c_lime,1);
+    draw_text_transformed_colour(room_width*0.5, room_height*0.85,"PRESS ENTER TO CONTINUE",0.9,0.9,0,c_lime,c_lime,c_lime,c_lime,1);
 }
 </string>
           </argument>
