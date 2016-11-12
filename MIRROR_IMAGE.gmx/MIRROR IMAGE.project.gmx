@@ -105,6 +105,7 @@
       </objects>
     </objects>
     <objects name="Burdens">
+      <object>objects\obj_blind</object>
       <object>objects\obj_pitfall_1</object>
       <object>objects\obj_pitfall_3</object>
       <object>objects\obj_pitfall_2</object>
