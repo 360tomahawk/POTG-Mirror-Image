@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x = (room_width * 0.15);
-y = (room_height * 0.8);
-FontSize = 1.5;
+            <string>x = (room_width*0.01);
+y = (room_height*0.01);
+FontSize = 1;
 
 isPlaying = false;
 </string>
@@ -134,7 +134,14 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_transformed_colour(x,y,string(int64(global.TimerLimitSec)), FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,0.5);
+            <string>var timeLeft = "TimeLeft: " + string(round(global.TimerLimitSec));
+
+draw_set_alpha(0.7);
+draw_rectangle_colour(x,y,(string_length(timeLeft)*font_get_size(fnt_default)*FontSize*0.5)+50,(font_get_size(fnt_default)*FontSize)+20,c_black,c_black,c_black,c_black,false);
+draw_set_alpha(1);
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_text_transformed_colour(x,y,timeLeft, FontSize,FontSize,0,c_lime,c_lime,c_lime,c_lime,0.8);
 </string>
           </argument>
         </arguments>

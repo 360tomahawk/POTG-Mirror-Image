@@ -158,8 +158,8 @@ repeat (OptionsSelection.TOTAL_SELECTIONS)
 var zedefaultFontSize = font_get_size(fnt_default);
 var offSet = 1.25;
 var zeStrLength = offSet * (string_length(zeListOfStr[zeOptionSelection]) * FontSize * zedefaultFontSize * 0.5);
-draw_sprite(spr_player,0,(room_width*0.5)-zeStrLength, (room_height*0.4) + (zeOptionSelection*offSetYPos));
-draw_sprite(spr_oPlayer,0,(room_width*0.5)+zeStrLength, (room_height*0.4) + (zeOptionSelection*offSetYPos));
+draw_sprite(spr_player,0,(room_width*0.5)-zeStrLength, (room_height*0.7) + (zeOptionSelection*offSetYPos));
+draw_sprite(spr_oPlayer,0,(room_width*0.5)+zeStrLength, (room_height*0.7) + (zeOptionSelection*offSetYPos));
 </string>
           </argument>
         </arguments>
