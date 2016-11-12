@@ -54,6 +54,18 @@ isPlaying = false;
             <kind>1</kind>
             <string>global.TimerLimitSec -= (1/room_speed);
 
+if(
+room == rm_main_menu ||
+room == rm_options_menu ||
+room == rm_win ||
+room == rm_end ||
+room == rm_test ||
+room == rm_template)
+{
+    instance_destroy();
+}
+        
+
 if(isPlaying == false)
 {
     audio_stop_sound(snd_mainmenu);
@@ -63,7 +75,7 @@ if(isPlaying == false)
 if(global.TimerLimitSec &lt;= 0)
 {
     global.TimerLimitSec = 0;
-    game_end();
+    room_goto(rm_end);
 }
 
 if(keyboard_check_pressed(ord("R")))
