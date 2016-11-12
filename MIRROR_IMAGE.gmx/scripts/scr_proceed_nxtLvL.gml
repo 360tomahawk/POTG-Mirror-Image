@@ -1,6 +1,7 @@
 ///scr_proceed_nxtLvL()
 if (room == room_last)
 {
+    global.PlayerScore = global.TimerLimitSec;
     room_goto(rm_win);
 }
 else
