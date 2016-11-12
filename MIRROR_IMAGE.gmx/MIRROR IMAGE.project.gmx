@@ -106,7 +106,6 @@
       </objects>
     </objects>
     <objects name="Burdens">
-      <object>objects\obj_blind</object>
       <object>objects\obj_pitfall_1</object>
       <object>objects\obj_pitfall_3</object>
       <object>objects\obj_pitfall_2</object>
@@ -117,6 +116,7 @@
       <object>objects\obj_swapper</object>
       <object>objects\obj_green_door</object>
       <object>objects\obj_red_door</object>
+      <object>objects\obj_blind</object>
     </objects>
     <object>objects\obj_collidable_parent</object>
     <object>objects\obj_players</object>
