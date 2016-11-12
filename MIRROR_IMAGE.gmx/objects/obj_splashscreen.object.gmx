@@ -92,7 +92,11 @@ if (zeStartTimerSec &gt; 3)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>draw_set_alpha(0.7);
+draw_rectangle_colour(0,0,room_width,room_height,c_black,c_black,c_black,c_black,false);
+draw_set_alpha(1);
+
+draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 var num = 0;
 var offsetY = 0;
