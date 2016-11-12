@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///check for collision to despawn doors
 
-if(place_meeting(x,y,obj_Player))
+if(place_meeting(x,y,obj_oPlayer))
 {
     with(obj_door_red)
     {
