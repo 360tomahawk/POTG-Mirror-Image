@@ -57,7 +57,7 @@ global.timeelapsedStage = 0;
             <string>global.TimerLimitSec -= (1/room_speed);
 global.timeelapsedStage += (1/room_speed);
 
-if(global.timeelapsedStage &gt; 5)
+if(global.timeelapsedStage &gt; 45)
 {
     weHaveIssues = true;
 }
