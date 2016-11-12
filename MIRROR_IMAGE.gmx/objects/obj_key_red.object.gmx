@@ -33,7 +33,11 @@ if(place_meeting(x,y,obj_oPlayer))
     {
         open = true;
     }
-    audio_play_sound(snd_key,0,false);
+    if(global.TurnOnSound)
+    {audio_play_sound(snd_key,0,false);
+    
+    }
+    
     instance_destroy();
 }
 </string>

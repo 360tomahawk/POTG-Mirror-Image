@@ -6,6 +6,9 @@ if (room == room_last)
 else
 {
     room_goto_next();
-    audio_play_sound(snd_nextLevel,0,0);
+    if(global.TurnOnSound)
+    {audio_play_sound(snd_nextLevel,0,0);
+    }
+    
     global.fogged = false;
 }
