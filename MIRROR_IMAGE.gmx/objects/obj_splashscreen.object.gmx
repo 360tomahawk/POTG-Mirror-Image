@@ -26,20 +26,20 @@
           <argument>
             <kind>1</kind>
             <string>zeStartTimerSec = 0;
-zeStrList[NumberOfLines.MECHANIC_STOPPER] = "- RED &amp; GREEN STOPPER: Will only allow the tomodachi #with the SAME hair color to pass through";
-zeStrList[NumberOfLines.MECHANIC_SWAPPER] = "- SWAPPER: Swaps the positions of the tomodachis";
-zeStrList[NumberOfLines.MECHANIC_KEYS] = "- RED &amp; GREEN KEYS: Opens Respective Doors when picked up";
-zeStrList[NumberOfLines.MECHANIC_PITFALL] = "- PITFALL: Degrades with each time being stepped over. #Once broken, cannot be crossed";
-zeStrList[NumberOfLines.MECHANIC_BLIND] = "- BLIND: Vision is affected for 20 seconds";
-zeStrList[NumberOfLines.MECHANIC_NEXTLVL] = "-NXTLVL: Sends the tomodachis to the next level";
-zeStrList[NumberOfLines.MECHANIC_WALL] = "- WALL: Default wall";
-zeStrList[NumberOfLines.MECHANIC_TITLE] = "Blocks &amp; Mechanics:";
-zeStrList[NumberOfLines.CONTROLS_RESTART] = "Press R to restart level";
-zeStrList[NumberOfLines.CONTROLS_SELECT] = "Enter to select a choice (when applicable)";
-zeStrList[NumberOfLines.CONTROLS_MOVE] = "Arrow keys to move up, down, left, or right respectively";
-zeStrList[NumberOfLines.CONTROLS_TITLE] = "Controls:";
-zeStrList[NumberOfLines.MESSAGE] = "This game will test your navigational abilities #and how well you can coordinate 2 friends, #who are forced to mirror each other's HORIZONTAL movements, #while trying to escape a dungeon";
-zeStrList[NumberOfLines.WELCOME] = "Welcome to TOMODACHI!";
+zeStrList[NumberOfLines.MECHANIC_STOPPER] = "  Will only allow the tomodachi #  with the SAME hair color to pass through";
+zeStrList[NumberOfLines.MECHANIC_SWAPPER] = "  Swaps the positions of the tomodachis";
+zeStrList[NumberOfLines.MECHANIC_KEYS] = "  Opens Respective Doors when picked up";
+zeStrList[NumberOfLines.MECHANIC_PITFALL] = "  Degrades with each time being stepped over. #  Once broken, cannot be crossed";
+zeStrList[NumberOfLines.MECHANIC_BLIND] = "  Vision is affected for 20 seconds";
+zeStrList[NumberOfLines.MECHANIC_NEXTLVL] = "  Sends the tomodachis to the next level";
+zeStrList[NumberOfLines.MECHANIC_WALL] = "  Default wall";
+zeStrList[NumberOfLines.MECHANIC_TITLE] = "  Blocks &amp; Mechanics:";
+zeStrList[NumberOfLines.CONTROLS_RESTART] = "  Press R to restart level";
+zeStrList[NumberOfLines.CONTROLS_SELECT] = "  Enter to select a choice (when applicable)";
+zeStrList[NumberOfLines.CONTROLS_MOVE] = "  Arrow keys to move up, down, left, or right respectively";
+zeStrList[NumberOfLines.CONTROLS_TITLE] = "  Controls:";
+zeStrList[NumberOfLines.MESSAGE] = "  This game will test your navigational abilities #  and how well you can coordinate 2 friends, #  who are forced to mirror each other's HORIZONTAL movements, #  while trying to escape a dungeon";
+zeStrList[NumberOfLines.WELCOME] = "  Welcome to TOMODACHI!";
 </string>
           </argument>
         </arguments>
