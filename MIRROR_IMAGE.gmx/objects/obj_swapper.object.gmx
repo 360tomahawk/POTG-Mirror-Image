@@ -25,30 +25,32 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var player1PosX = obj_Player.x;
-var player1PosY = obj_Player.y;
-var player2PosX = obj_oPlayer.x;
-var player2PosY = obj_oPlayer.y;
-tempbool = false;
-
-if(place_meeting(x,y,obj_players))
+            <string>if (instance_exists(obj_Player) &amp;&amp; instance_exists(obj_oPlayer))
 {
-    obj_Player.x = player2PosX;
-    obj_Player.y = player2PosY;
-    obj_oPlayer.x = player1PosX;
-    obj_oPlayer.y = player1PosY;
-    if(!tempbool)
+    var player1PosX = obj_Player.x;
+    var player1PosY = obj_Player.y;
+    var player2PosX = obj_oPlayer.x;
+    var player2PosY = obj_oPlayer.y;
+    tempbool = false;
+    
+    if(place_meeting(x,y,obj_players))
     {
-        if(global.TurnOnSound)
-    {
-    audio_play_sound(snd_swapping,0, false);
+        obj_Player.x = player2PosX;
+        obj_Player.y = player2PosY;
+        obj_oPlayer.x = player1PosX;
+        obj_oPlayer.y = player1PosY;
+        if(!tempbool)
+        {
+            if(global.TurnOnSound)
+        {
+        audio_play_sound(snd_swapping,0, false);
+        }
+            
+            tempbool = true;
+        }
+        instance_destroy();
     }
-        
-        tempbool = true;
-    }
-    instance_destroy();
 }
-
 </string>
           </argument>
         </arguments>
