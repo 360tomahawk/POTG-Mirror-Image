@@ -68,6 +68,9 @@
     </scripts>
     <script>scripts\scr_fogged_draw.gml</script>
     <script>scripts\scr_proceed_nxtLvL.gml</script>
+    <scripts name="loading and saving high score">
+      <script>scripts\script7.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
